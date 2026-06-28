@@ -1,5 +1,9 @@
 # Reverse-Shell-Detector
 
+📘 Reverse Shell Detector 
+It is an advanced, EDR‑style (Endpoint Detection and Response) monitoring tool that continuously scans running processes, network connections, and system behaviours to detect and terminate unauthorised reverse shells. Reverse shells are a primary method used by attackers to maintain persistent, interactive access to compromised systems—often bypassing traditional firewalls because the connection is initiated outbound from the victim. This tool provides real‑time visibility into these malicious outbound connections and actively disrupts them, serving as a lightweight endpoint security agent.
+
+
 🎯 Objective
 
 To detect and neutralise unauthorised remote access sessions on a Linux system. Attackers commonly exploit vulnerabilities to plant a reverse shell payload (e.g., via nc, bash, python, perl, ruby, php or custom malware) that connects back to a command‑and‑control (C2) server. Traditional firewalls often fail to block these connections because they appear as legitimate outbound traffic. This tool monitors system processes and network connections in real time, applies heuristic and rule‑based detection, and automatically kills malicious processes to sever the attacker's foothold.
@@ -43,6 +47,7 @@ The Reverse Shell Detector operates at the intersection of process monitoring an
         Optionally blocks the remote IP address using iptables to prevent reconnection attempts.
 
         Sends an alert via Slack, Telegram, or email to the SOC team.
+   
 
 ✨ Advanced Features (Real‑World Upgrade)
 Feature	Implementation
